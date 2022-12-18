@@ -1,0 +1,16 @@
+﻿@model RepoPractice.Models.CategoryModel
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Category :@Model.CategoryName</h2>
+
+<ul>
+    @foreach(var item in Model.Product)
+            {
+               <li>
+                   @Html.ActionLink(item.ProductName,"Details",new {id=item.ProductId})
+               </li>
+            }
+</ul>

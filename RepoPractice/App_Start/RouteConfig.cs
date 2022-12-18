@@ -13,14 +13,14 @@ namespace RepoPractice
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-              name: "Default",
-              url: "{controller}/{action}/{id}",
-              defaults: new { controller = "Buyer", action = "BuyerDisplayAllProduct", id = UrlParameter.Optional }
-          );
+          //  routes.MapRoute(
+          //    name: "Default",
+          //    url: "{controller}/{action}/{id}",
+          //    defaults: new { controller = "Buyer", action = "BuyerDisplayAllProduct", id = UrlParameter.Optional }
+          //);
 
             routes.MapRoute(
-               name: "AllProduct",
+               name: "Default",
                url: "{controller}/{action}/{id}",
                defaults: new { controller = "Buyer", action = "BuyerDisplayAllProduct", id = UrlParameter.Optional }
            );
@@ -34,7 +34,7 @@ namespace RepoPractice
             routes.MapRoute(
                name: "ViewCart",
                url: "{controller}/{action}/{id}",
-               defaults: new { controller = "Buyer", action = "ViewCart", id = UrlParameter.Optional }
+               defaults: new { controller = "Buyer", action = "checkout", id = UrlParameter.Optional }
            );
 
             routes.MapRoute(

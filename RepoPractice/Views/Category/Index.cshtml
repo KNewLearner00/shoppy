@@ -1,0 +1,19 @@
+﻿@model IEnumerable< RepoPractice.Models.CategoryModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categories :</h2>
+<p>
+    select from @Model.Count()
+    genres:
+</p>
+  <ul>
+      @foreach(var c in Model)
+            {
+                <li>
+                    @Html.ActionLink(c.CategoryName, "Browse", new { c = c.CategoryName})
+                </li>
+            }
+  </ul>  

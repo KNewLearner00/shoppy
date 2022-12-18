@@ -17,6 +17,7 @@ namespace RepoPractice.Models
 
         [Required]
         public float TotalAmount { get; set; }
+        public int price { get; set; }
          public string productname { get; set; }
         public UserModel UserModel { get; set; }
 

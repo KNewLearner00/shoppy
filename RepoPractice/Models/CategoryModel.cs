@@ -13,5 +13,6 @@ namespace RepoPractice.Models
 
         [Required]
         public string CategoryName { get; set; }
+        public virtual IList<ProductModel> Product { get; set; }
     }
 }
